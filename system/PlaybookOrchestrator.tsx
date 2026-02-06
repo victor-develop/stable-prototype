@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { FLOWS } from '../presets';
 import { Flow, Command } from '../types';
-import { Search, Play, Pause, RotateCcw, ChevronUp, ChevronDown, Terminal, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, Play, Pause, RotateCcw, ChevronUp, ChevronDown, Terminal, CheckCircle2, ChevronLeft, ChevronRight, User } from 'lucide-react';
 
 interface Props {
   onExecute: (cmd: Command) => Promise<void>;
@@ -118,7 +117,12 @@ export const PlaybookOrchestrator: React.FC<Props> = ({ onExecute, isExecuting, 
                           setIsDropdownOpen(false);
                         }}
                       >
-                        <div className="font-semibold text-indigo-300 group-hover:text-white transition-colors">{flow.name}</div>
+                        <div className="flex items-center justify-between">
+                          <div className="font-semibold text-indigo-300 group-hover:text-white transition-colors">{flow.name}</div>
+                          <div className="text-[10px] bg-slate-700 px-2 py-0.5 rounded text-slate-300 group-hover:bg-indigo-500 group-hover:text-white transition-colors uppercase tracking-wider font-bold">
+                            {flow.user}
+                          </div>
+                        </div>
                         <div className="text-xs text-slate-400 line-clamp-1 group-hover:text-slate-200">{flow.description}</div>
                       </button>
                     ))
@@ -152,9 +156,18 @@ export const PlaybookOrchestrator: React.FC<Props> = ({ onExecute, isExecuting, 
 
           {selectedFlow && (
             <div className="flex items-center gap-4 animate-in fade-in slide-in-from-top-2 duration-300 text-white">
-              <div className="px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg">
-                <span className="text-xs font-bold text-indigo-400 uppercase tracking-wider block">Active Preset</span>
-                <span className="text-sm font-medium">{selectedFlow.name}</span>
+              <div className="flex flex-col md:flex-row gap-2">
+                <div className="px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg">
+                  <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Active Preset</span>
+                  <span className="text-sm font-medium">{selectedFlow.name}</span>
+                </div>
+                <div className="px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center gap-2">
+                  <User size={14} className="text-emerald-400" />
+                  <div>
+                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Persona</span>
+                    <span className="text-sm font-medium">{selectedFlow.user}</span>
+                  </div>
+                </div>
               </div>
               
               <div className="flex gap-2">

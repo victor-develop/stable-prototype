@@ -1,4 +1,3 @@
-
 import { Flow } from '../types';
 import { sleep } from './utils';
 
@@ -6,6 +5,7 @@ export const userLoginFlow: Flow = {
   id: 'user-login',
   name: 'User Login Flow',
   description: 'Standard authentication flow for existing users.',
+  user: 'Returning Member',
   seeds: async () => {
     await sleep(300);
     return { lastUsedEmail: 'admin@system.com' };

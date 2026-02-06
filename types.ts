@@ -1,4 +1,3 @@
-
 export type CommandType = 'navigate' | 'keyin' | 'click' | 'wait' | 'assert' | 'seed';
 
 export interface Command {
@@ -11,6 +10,7 @@ export interface Flow {
   id: string;
   name: string;
   description: string;
+  user: string;
   commands: Command[];
   seeds: () => Promise<any>;
 }

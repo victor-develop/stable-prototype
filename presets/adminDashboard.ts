@@ -1,10 +1,10 @@
-
 import { Flow } from '../types';
 
 export const adminDashboardFlow: Flow = {
   id: 'admin-dashboard-audit',
   name: 'Admin Dashboard Audit',
   description: 'An exploration of the administrator dashboard widgets.',
+  user: 'System Administrator',
   seeds: async () => {
     return { reportsCount: 12, alerts: 2 };
   },

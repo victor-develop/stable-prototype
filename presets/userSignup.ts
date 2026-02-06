@@ -1,4 +1,3 @@
-
 import { Flow } from '../types';
 import { sleep } from './utils';
 
@@ -6,6 +5,7 @@ export const userSignupFlow: Flow = {
   id: 'user-signup',
   name: 'User Sign Up Flow',
   description: 'Walkthrough of a new user registering for the platform.',
+  user: 'New Prospect',
   seeds: async () => {
     await sleep(500);
     return { suggestedUsername: 'johndoe_' + Math.floor(Math.random() * 1000) };
