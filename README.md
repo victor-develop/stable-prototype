@@ -7,6 +7,13 @@ https://ai.studio/apps/drive/1OfaSEDyezA3rRm0yXI-E2r9GyLD0yAIZ
 
 ---
 
+## 💡 Why I Build This
+
+- **Managing Complexity**: Users with no coding experience often stumble as app complexity grows while building with LLMs. More features make manual testing difficult; they often don't know what might have accidentally broken. I added "Playbooks" so they can verify their flows quickly and visually.
+- **Bridging the Gap**: Realistically, it is very difficult for a user with zero coding knowledge to build a production-ready application. This tool allows them to build a high-fidelity "toy" (prototype) that effectively communicates their vision, which can then be shipped to a professional developer for implementation.
+
+---
+
 ## 🚀 System Architecture
 
 ### 1. The Command Language
