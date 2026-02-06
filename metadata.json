@@ -1,0 +1,5 @@
+{
+  "name": "UX Prototype Automation Playbook",
+  "description": "A developer-centric tool for automating UX walkthroughs and prototyping flows using a command-based orchestration system.",
+  "requestFramePermissions": []
+}
