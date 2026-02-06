@@ -2,6 +2,9 @@
 
 A developer-centric framework for orchestrating automated UX walkthroughs. This system allows you to define user flows as "playbooks" that visually execute on top of React components.
 
+Play it around: Clone a copy with your google account and start adding presets and components: 
+https://ai.studio/apps/drive/1OfaSEDyezA3rRm0yXI-E2r9GyLD0yAIZ
+
 ---
 
 ## 🚀 System Architecture
