@@ -1,15 +1,15 @@
 
 import React, { useState } from 'react';
-import { PlaybookOrchestrator } from './orchestrator/PlaybookOrchestrator';
-import { useCommandExecutor } from './cmdhooks/useCommandExecutor';
+import { PlaybookOrchestrator } from './system/PlaybookOrchestrator';
+import { useCommandExecutor } from './system/useCommandExecutor';
 import { AppState } from './types';
 import { Play } from 'lucide-react';
 
-// Component imports
-import { LandingView } from './playbookComponents/LandingView';
-import { SignupView } from './playbookComponents/SignupView';
-import { LoginView } from './playbookComponents/LoginView';
-import { DashboardView } from './playbookComponents/DashboardView';
+// View imports from the Experience Layer
+import { LandingView } from './views/LandingView';
+import { SignupView } from './views/SignupView';
+import { LoginView } from './views/LoginView';
+import { DashboardView } from './views/DashboardView';
 
 const INITIAL_STATE: AppState = {
   currentView: 'landing',
@@ -79,7 +79,7 @@ export default function App() {
       </main>
 
       <footer className="fixed bottom-4 left-4 text-slate-400 text-[10px] font-mono uppercase tracking-[0.2em] pointer-events-none z-10">
-        Prototype Automation OS v1.0.6 // Ready
+        Prototype Automation OS v1.0.8 // Ready
       </footer>
     </div>
   );
